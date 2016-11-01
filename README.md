@@ -1,7 +1,7 @@
 # Ocean Data Lab Material
 
 ```{r, engine='bash', count_lines}
-cd oceanDataLab build -t tristansalles/oceandata .
+cd oceanDataLab 
 ```
 
 ```{r, engine='bash', count_lines}
