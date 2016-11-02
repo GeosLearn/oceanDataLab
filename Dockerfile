@@ -21,4 +21,5 @@ WORKDIR /workspace
 EXPOSE 8888
 ENTRYPOINT ["/usr/local/bin/tini", "--"]
 
+ENV LD_LIBRARY_PATH=/usr/local/lib
 CMD jupyter notebook --ip=0.0.0.0 --no-browser
