@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+  <attribute name="start_date" type="string" value="2011-08-27 UTC" />
+  <attribute name="start_time" type="string" value="00:00:00 UTC" />
+  <attribute name="stop_date" type="string" value="2015-06-04 UTC" />
+  <attribute name="stop_time" type="string" value = "23:59:59 UTC" />
+  
+  <dimension name="lat" length="180"/>
+  <dimension name="lon" length="360"/>
+  <dimension name="colorindex" length="3" />
+  <dimension name="rgb" length="256" />
+  
+  <attribute name="Convention" value="CF-1.0" />
+  
+  <variable name="lat" shape="lat" type="double">
+        <attribute name="standard_name" type="String" value="latitude"/>
+        <attribute name="axis" type="string" value="Y"/>
+        <attribute name="units" type="string" value="degrees_north" />
+        <values start="89.5" increment="-1.0"/>
+  </variable>
+  <variable name="lon" shape="lon" type="double">
+        <attribute name="standard_name" type="string" value="longitude"/>
+        <attribute name="axis" type="string" value="X"/>
+        <attribute name="units" type="string" value="degrees_east" />
+        <values start="-179.5" increment="1.0"/>
+  </variable>
+  <variable name="time" shape="time" type="int">
+        <attribute name="standard_name" type="string" value="time"/>
+        <attribute name="axis" type="string" value="T"/>
+        <attribute name="units" type="string" value="days since 2011-01-01"/>
+  </variable>
+  <variable name="colorindex" shape="colorindex" type="int">
+        <attribute name="units" value="index"/>
+        <values start="0" increment="1"/>
+  </variable>
+  <variable name="rgb" shape="rgb" type="int">
+        <attribute name="units" value="rgb"/>
+        <values start="0" increment="1"/>
+  </variable>
+  <variable name="l3m_data" shape="time lat lon">
+        <attribute name="valid_min" value="0.0" type="float"/>
+        <attribute name="standard_name" value="sea_surface_salinity"/>
+        <attribute name="units" value="psu"/>
+  </variable>
+  <variable name="palette" shape="time colorindex rgb" />
+
+  <aggregation dimName="time" type="joinNew">
+        <variableAgg name="T"/>
+        <variableAgg name="l3m_data"/>
+        <variableAgg name="palette"/>
+
+<netcdf id="1" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/239/Q20112392011245.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="238"/>
+<netcdf id="2" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/246/Q20112462011252.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="245"/>
+<netcdf id="3" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/253/Q20112532011259.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="252"/>
+<netcdf id="4" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/260/Q20112602011266.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="259"/>
+<netcdf id="5" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/267/Q20112672011273.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="266"/>
+<netcdf id="6" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/274/Q20112742011280.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="273"/>
+<netcdf id="7" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/281/Q20112812011287.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="280"/>
+<netcdf id="8" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/288/Q20112882011294.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="287"/>
+<netcdf id="9" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/295/Q20112952011301.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="294"/>
+<netcdf id="10" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/302/Q20113022011308.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="301"/>
+<netcdf id="11" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/309/Q20113092011315.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="308"/>
+<netcdf id="12" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/316/Q20113162011322.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="315"/>
+<netcdf id="13" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/323/Q20113232011329.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="322"/>
+<netcdf id="14" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/330/Q20113302011336.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="329"/>
+<netcdf id="15" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/337/Q20113372011343.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="336"/>
+<netcdf id="16" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/344/Q20113442011350.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="343"/>
+<netcdf id="17" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/351/Q20113512011357.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="350"/>
+<netcdf id="18" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/358/Q20113582011364.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="357"/>
+<netcdf id="19" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2011/365/Q20113652012006.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="364"/>
+<netcdf id="20" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/001/Q20120012012007.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="365"/>
+<netcdf id="21" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/008/Q20120082012014.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="372"/>
+<netcdf id="22" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/015/Q20120152012021.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="379"/>
+<netcdf id="23" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/022/Q20120222012028.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="386"/>
+<netcdf id="24" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/029/Q20120292012035.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="393"/>
+<netcdf id="25" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/036/Q20120362012042.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="400"/>
+<netcdf id="26" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/043/Q20120432012049.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="407"/>
+<netcdf id="27" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/050/Q20120502012056.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="414"/>
+<netcdf id="28" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/057/Q20120572012063.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="421"/>
+<netcdf id="29" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/064/Q20120642012070.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="428"/>
+<netcdf id="30" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/071/Q20120712012077.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="435"/>
+<netcdf id="31" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/078/Q20120782012084.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="442"/>
+<netcdf id="32" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/085/Q20120852012091.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="449"/>
+<netcdf id="33" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/092/Q20120922012098.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="456"/>
+<netcdf id="34" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/099/Q20120992012105.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="463"/>
+<netcdf id="35" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/106/Q20121062012112.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="470"/>
+<netcdf id="36" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/113/Q20121132012119.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="477"/>
+<netcdf id="37" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/120/Q20121202012126.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="484"/>
+<netcdf id="38" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/127/Q20121272012133.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="491"/>
+<netcdf id="39" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/134/Q20121342012140.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="498"/>
+<netcdf id="40" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/141/Q20121412012147.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="505"/>
+<netcdf id="41" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/148/Q20121482012154.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="512"/>
+<netcdf id="42" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/155/Q20121552012161.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="519"/>
+<netcdf id="43" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/162/Q20121622012168.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="526"/>
+<netcdf id="44" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/169/Q20121692012175.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="533"/>
+<netcdf id="45" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/176/Q20121762012182.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="540"/>
+<netcdf id="46" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/183/Q20121832012189.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="547"/>
+<netcdf id="47" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/190/Q20121902012196.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="554"/>
+<netcdf id="48" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/197/Q20121972012203.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="561"/>
+<netcdf id="49" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/204/Q20122042012210.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="568"/>
+<netcdf id="50" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/211/Q20122112012217.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="575"/>
+<netcdf id="51" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/218/Q20122182012224.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="582"/>
+<netcdf id="52" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/225/Q20122252012231.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="589"/>
+<netcdf id="53" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/232/Q20122322012238.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="596"/>
+<netcdf id="54" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/239/Q20122392012245.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="603"/>
+<netcdf id="55" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/246/Q20122462012252.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="610"/>
+<netcdf id="56" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/253/Q20122532012259.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="617"/>
+<netcdf id="57" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/260/Q20122602012266.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="624"/>
+<netcdf id="58" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/267/Q20122672012273.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="631"/>
+<netcdf id="59" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/274/Q20122742012280.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="638"/>
+<netcdf id="60" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/281/Q20122812012287.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="645"/>
+<netcdf id="61" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/288/Q20122882012294.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="652"/>
+<netcdf id="62" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/295/Q20122952012301.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="659"/>
+<netcdf id="63" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/302/Q20123022012308.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="666"/>
+<netcdf id="64" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/309/Q20123092012315.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="673"/>
+<netcdf id="65" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/316/Q20123162012322.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="680"/>
+<netcdf id="66" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/323/Q20123232012329.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="687"/>
+<netcdf id="67" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/330/Q20123302012336.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="694"/>
+<netcdf id="68" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/337/Q20123372012343.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="701"/>
+<netcdf id="69" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/344/Q20123442012350.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="708"/>
+<netcdf id="70" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/351/Q20123512012357.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="715"/>
+<netcdf id="71" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/358/Q20123582012364.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="722"/>
+<netcdf id="72" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2012/365/Q20123652013005.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="729"/>
+<netcdf id="73" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/001/Q20130012013007.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="731"/>
+<netcdf id="74" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/008/Q20130082013014.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="738"/>
+<netcdf id="75" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/015/Q20130152013021.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="745"/>
+<netcdf id="76" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/022/Q20130222013028.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="752"/>
+<netcdf id="77" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/029/Q20130292013035.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="759"/>
+<netcdf id="78" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/036/Q20130362013042.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="766"/>
+<netcdf id="79" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/043/Q20130432013049.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="773"/>
+<netcdf id="80" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/050/Q20130502013056.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="780"/>
+<netcdf id="81" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/057/Q20130572013063.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="787"/>
+<netcdf id="82" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/064/Q20130642013070.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="794"/>
+<netcdf id="83" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/071/Q20130712013077.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="801"/>
+<netcdf id="84" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/078/Q20130782013084.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="808"/>
+<netcdf id="85" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/085/Q20130852013091.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="815"/>
+<netcdf id="86" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/092/Q20130922013098.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="822"/>
+<netcdf id="87" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/099/Q20130992013105.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="829"/>
+<netcdf id="88" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/106/Q20131062013112.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="836"/>
+<netcdf id="89" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/113/Q20131132013119.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="843"/>
+<netcdf id="90" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/120/Q20131202013126.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="850"/>
+<netcdf id="91" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/127/Q20131272013133.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="857"/>
+<netcdf id="92" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/134/Q20131342013140.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="864"/>
+<netcdf id="93" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/141/Q20131412013147.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="871"/>
+<netcdf id="94" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/148/Q20131482013154.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="878"/>
+<netcdf id="95" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/155/Q20131552013161.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="885"/>
+<netcdf id="96" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/162/Q20131622013168.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="892"/>
+<netcdf id="97" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/169/Q20131692013175.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="899"/>
+<netcdf id="98" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/176/Q20131762013182.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="906"/>
+<netcdf id="99" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/183/Q20131832013189.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="913"/>
+<netcdf id="100" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/190/Q20131902013196.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="920"/>
+<netcdf id="101" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/197/Q20131972013203.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="927"/>
+<netcdf id="102" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/204/Q20132042013210.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="934"/>
+<netcdf id="103" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/211/Q20132112013217.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="941"/>
+<netcdf id="104" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/218/Q20132182013224.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="948"/>
+<netcdf id="105" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/225/Q20132252013231.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="955"/>
+<netcdf id="106" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/232/Q20132322013238.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="962"/>
+<netcdf id="107" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/239/Q20132392013245.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="969"/>
+<netcdf id="108" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/246/Q20132462013252.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="976"/>
+<netcdf id="109" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/253/Q20132532013259.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="983"/>
+<netcdf id="110" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/260/Q20132602013266.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="990"/>
+<netcdf id="111" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/267/Q20132672013273.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="997"/>
+<netcdf id="112" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/274/Q20132742013280.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1004"/>
+<netcdf id="113" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/281/Q20132812013287.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1011"/>
+<netcdf id="114" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/288/Q20132882013294.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1018"/>
+<netcdf id="115" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/295/Q20132952013301.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1025"/>
+<netcdf id="116" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/302/Q20133022013308.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1032"/>
+<netcdf id="117" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/309/Q20133092013315.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1039"/>
+<netcdf id="118" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/316/Q20133162013322.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1046"/>
+<netcdf id="119" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/323/Q20133232013329.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1053"/>
+<netcdf id="120" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/330/Q20133302013336.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1060"/>
+<netcdf id="121" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/337/Q20133372013343.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1067"/>
+<netcdf id="122" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/344/Q20133442013350.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1074"/>
+<netcdf id="123" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/351/Q20133512013357.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1081"/>
+<netcdf id="124" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/358/Q20133582013364.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1088"/>
+<netcdf id="125" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2013/365/Q20133652014006.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1095"/>
+<netcdf id="126" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/001/Q20140012014007.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1096"/>
+<netcdf id="127" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/008/Q20140082014014.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1103"/>
+<netcdf id="128" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/015/Q20140152014021.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1110"/>
+<netcdf id="129" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/022/Q20140222014028.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1117"/>
+<netcdf id="130" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/029/Q20140292014035.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1124"/>
+<netcdf id="131" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/036/Q20140362014042.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1131"/>
+<netcdf id="132" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/043/Q20140432014049.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1138"/>
+<netcdf id="133" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/050/Q20140502014056.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1145"/>
+<netcdf id="134" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/057/Q20140572014063.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1152"/>
+<netcdf id="135" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/064/Q20140642014070.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1159"/>
+<netcdf id="136" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/071/Q20140712014077.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1166"/>
+<netcdf id="137" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/078/Q20140782014084.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1173"/>
+<netcdf id="138" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/085/Q20140852014091.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1180"/>
+<netcdf id="139" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/092/Q20140922014098.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1187"/>
+<netcdf id="140" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/099/Q20140992014105.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1194"/>
+<netcdf id="141" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/106/Q20141062014112.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1201"/>
+<netcdf id="142" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/113/Q20141132014119.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1208"/>
+<netcdf id="143" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/120/Q20141202014126.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1215"/>
+<netcdf id="144" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/127/Q20141272014133.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1222"/>
+<netcdf id="145" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/134/Q20141342014140.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1229"/>
+<netcdf id="146" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/141/Q20141412014147.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1236"/>
+<netcdf id="147" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/148/Q20141482014154.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1243"/>
+<netcdf id="148" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/155/Q20141552014161.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1250"/>
+<netcdf id="149" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/162/Q20141622014168.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1257"/>
+<netcdf id="150" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/169/Q20141692014175.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1264"/>
+<netcdf id="151" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/176/Q20141762014182.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1271"/>
+<netcdf id="152" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/183/Q20141832014189.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1278"/>
+<netcdf id="153" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/190/Q20141902014196.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1285"/>
+<netcdf id="154" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/197/Q20141972014203.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1292"/>
+<netcdf id="155" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/204/Q20142042014210.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1299"/>
+<netcdf id="156" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/211/Q20142112014217.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1306"/>
+<netcdf id="157" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/218/Q20142182014224.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1313"/>
+<netcdf id="158" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/225/Q20142252014231.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1320"/>
+<netcdf id="159" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/232/Q20142322014238.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1327"/>
+<netcdf id="160" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/239/Q20142392014245.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1334"/>
+<netcdf id="161" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/246/Q20142462014252.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1341"/>
+<netcdf id="162" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/253/Q20142532014259.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1348"/>
+<netcdf id="163" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/260/Q20142602014266.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1355"/>
+<netcdf id="164" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/267/Q20142672014273.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1362"/>
+<netcdf id="165" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/274/Q20142742014280.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1369"/>
+<netcdf id="166" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/281/Q20142812014287.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1376"/>
+<netcdf id="167" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/288/Q20142882014294.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1383"/>
+<netcdf id="168" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/295/Q20142952014301.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1390"/>
+<netcdf id="169" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/302/Q20143022014308.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1397"/>
+<netcdf id="170" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/309/Q20143092014315.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1404"/>
+<netcdf id="171" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/316/Q20143162014322.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1411"/>
+<netcdf id="172" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/323/Q20143232014329.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1418"/>
+<netcdf id="173" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/330/Q20143302014336.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1425"/>
+<netcdf id="174" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/337/Q20143372014343.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1432"/>
+<netcdf id="175" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/344/Q20143442014350.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1439"/>
+<netcdf id="176" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/351/Q20143512014357.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1446"/>
+<netcdf id="177" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/358/Q20143582014364.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1453"/>
+<netcdf id="178" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2014/365/Q20143652015006.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1460"/>
+<netcdf id="179" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/001/Q20150012015007.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1461"/>
+<netcdf id="180" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/008/Q20150082015014.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1468"/>
+<netcdf id="181" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/015/Q20150152015021.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1475"/>
+<netcdf id="182" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/022/Q20150222015028.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1482"/>
+<netcdf id="183" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/029/Q20150292015035.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1489"/>
+<netcdf id="184" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/036/Q20150362015042.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1496"/>
+<netcdf id="185" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/043/Q20150432015049.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1503"/>
+<netcdf id="186" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/050/Q20150502015056.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1510"/>
+<netcdf id="187" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/057/Q20150572015063.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1517"/>
+<netcdf id="188" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/064/Q20150642015070.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1524"/>
+<netcdf id="189" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/071/Q20150712015077.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1531"/>
+<netcdf id="190" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/078/Q20150782015084.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1538"/>
+<netcdf id="191" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/085/Q20150852015091.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1545"/>
+<netcdf id="192" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/092/Q20150922015098.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1552"/>
+<netcdf id="193" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/099/Q20150992015105.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1559"/>
+<netcdf id="194" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/106/Q20151062015112.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1566"/>
+<netcdf id="195" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/113/Q20151132015119.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1573"/>
+<netcdf id="196" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/120/Q20151202015126.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1580"/>
+<netcdf id="197" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/127/Q20151272015133.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1587"/>
+<netcdf id="198" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/134/Q20151342015140.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1594"/>
+<netcdf id="199" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/141/Q20151412015147.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1601"/>
+<netcdf id="200" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/148/Q20151482015154.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1608"/>
+<netcdf id="201" location = "/cache/thredds/data/aquarius/L3/mapped/V4/7day/SCI/2015/155/Q20151552015161.L3m_7D_SCI_V4.0_SSS_1deg" coordValue="1615"/>
+  </aggregation>
+ </netcdf>
